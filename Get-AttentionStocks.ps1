@@ -1,4 +1,4 @@
-﻿# Get-AttentionStocks.ps1
+# Get-AttentionStocks.ps1
 # 台灣股市注意股分析系統
 
 # 設定編碼，確保中文正常顯示
@@ -246,6 +246,21 @@ function Sync-ToGitHub {
     Write-Host "                 正在執行 GitHub 同步檢查" -ForegroundColor Cyan
     Write-Host "==========================================================" -ForegroundColor Cyan
     
+    # 自動偵測預設安裝路徑，若不在 PATH 中則加入
+    if (!(Get-Command git -ErrorAction SilentlyContinue)) {
+        $defaultGitPaths = @(
+            "C:\Program Files\Git\cmd",
+            "C:\Program Files (x86)\Git\cmd",
+            "$env:LocalAppData\Programs\Git\cmd"
+        )
+        foreach ($gp in $defaultGitPaths) {
+            if (Test-Path (Join-Path $gp "git.exe")) {
+                $env:PATH += ";$gp"
+                break
+            }
+        }
+    }
+
     # 檢查 git 是否可用
     $gitExists = $false
     try {
