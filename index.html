@@ -50,6 +50,35 @@
         <main class="main-content">
             <!-- 左側：雙表格區域 -->
             <div class="tables-section">
+                <!-- 聽牌股區塊 -->
+                <div class="table-container">
+                    <div class="table-header" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(234, 179, 8, 0.15) 100%);">
+                        <h2 style="color: var(--color-yellow); text-shadow: 0 0 10px rgba(234, 179, 8, 0.3);">🔥 盤中即時處置聽牌監控 (今日達標，明日處置)</h2>
+                    </div>
+                    <div class="table-wrapper">
+                        <table id="listening-table">
+                            <thead>
+                                <tr>
+                                    <th>證券代號</th>
+                                    <th>證券名稱</th>
+                                    <th class="text-center">市場</th>
+                                    <th class="text-right">昨日收盤</th>
+                                    <th class="text-right">今日最新</th>
+                                    <th class="text-right">今日成交量</th>
+                                    <th class="text-right">最易價格門檻</th>
+                                    <th class="text-right">成交量門檻</th>
+                                    <th class="text-center">聽牌狀態</th>
+                                </tr>
+                            </thead>
+                            <tbody id="listening-tbody">
+                                <tr>
+                                    <td colspan="9" class="placeholder-row">載入中...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
                 <!-- 預警股區塊 -->
                 <div class="table-container">
                     <div class="table-header">

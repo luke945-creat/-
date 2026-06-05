@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const marketFilter = document.getElementById('market-filter');
     const warningTbody = document.getElementById('warning-tbody');
     const disposedTbody = document.getElementById('disposed-tbody');
+    const listeningTbody = document.getElementById('listening-tbody');
     const countNotice = document.getElementById('count-notice');
     const countWarn = document.getElementById('count-warn');
     const countDisposed = document.getElementById('count-disposed');
@@ -16,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 全局資料狀態
     let allStocks = [];
+    let listeningStocks = [];
     let filteredWarningStocks = [];
     let filteredDisposedStocks = [];
     let selectedStockCode = null;
@@ -83,22 +85,39 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.warn("未能載入 db/targets.json (可能尚未計算):", e);
             }
 
+            // 嘗試載入聽牌監控數據
+            try {
+                const listeningRes = await fetch('db/listening_data.json?t=' + new Date().getTime());
+                if (listeningRes.ok) {
+                    const data = await listeningRes.json();
+                    listeningStocks = data.listening_stocks || [];
+                    console.log("成功載入聽牌股監控:", listeningStocks);
+                }
+            } catch (e) {
+                console.warn("未能載入 db/listening_data.json (可能尚未執行預測):", e);
+            }
+
             // 讀取相對路徑的資料庫
             const response = await fetch('db/dashboard_data.json');
             if (!response.ok) {
                 throw new Error("無法讀取 db/dashboard_data.json，請確認分析指令已執行。");
             }
             allStocks = await response.json();
-            statusText.textContent = `載入成功。共有 ${allStocks.length} 檔連續注意與處置個股。`;
+            statusText.textContent = `載入成功。共有 ${allStocks.length} 檔連續注意/處置，${listeningStocks.length} 檔聽牌監控個股。`;
             applyFilters();
             
-            // 預設選取第一筆注意股
-            const firstRow = warningTbody.querySelector('tr[data-code]');
-            if (firstRow) {
-                firstRow.click();
+            // 預設選取第一選中的列 (優先聽牌股，其次預警股，再者處置股)
+            const firstListRow = listeningTbody.querySelector('tr[data-code]');
+            if (firstListRow) {
+                firstListRow.click();
             } else {
-                const firstDispRow = disposedTbody.querySelector('tr[data-code]');
-                if (firstDispRow) firstDispRow.click();
+                const firstRow = warningTbody.querySelector('tr[data-code]');
+                if (firstRow) {
+                    firstRow.click();
+                } else {
+                    const firstDispRow = disposedTbody.querySelector('tr[data-code]');
+                    if (firstDispRow) firstDispRow.click();
+                }
             }
         } catch (error) {
             console.error(error);
@@ -116,9 +135,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // 清空列表
         warningTbody.innerHTML = '';
         disposedTbody.innerHTML = '';
+        listeningTbody.innerHTML = '';
 
         filteredWarningStocks = [];
         filteredDisposedStocks = [];
+        let filteredListeningStocks = [];
 
         allStocks.forEach(stock => {
             const code = stock.Code || "";
@@ -275,7 +296,84 @@ document.addEventListener('DOMContentLoaded', () => {
                 tr.addEventListener('click', () => selectStock(stock, tr, 'warning'));
                 warningTbody.appendChild(tr);
             }
+        // 渲染聽牌股列表
+        listeningStocks.forEach(stock => {
+            const code = stock.code || "";
+            const name = stock.name || "";
+            const market = stock.market || "";
+
+            // 搜尋過濾
+            if (searchQuery && !code.includes(searchQuery) && !name.includes(searchQuery)) {
+                return;
+            }
+            // 市場過濾
+            if (marketQuery !== "全部" && market !== marketQuery) {
+                return;
+            }
+
+            filteredListeningStocks.push(stock);
+
+            // 價格門檻顯示
+            const pCalc = stock.best_price_calc;
+            let priceThresholdStr = "N/A";
+            let priceClass = "";
+            let changeVal = 999.0;
+            if (pCalc) {
+                const dir = pCalc.dir;
+                const price = pCalc.price;
+                const change = pCalc.change;
+                changeVal = change;
+                priceThresholdStr = `${dir} ${price.toFixed(2)}元 (${change >= 0 ? '+' : ''}${change.toFixed(2)}%)`;
+                priceClass = dir === "▲" ? "up-val" : "down-val";
+            }
+
+            // 成交量門檻顯示
+            let volThresholdStr = "N/A";
+            if (stock.trigger_vol_val > 0) {
+                volThresholdStr = `${(stock.trigger_vol_val / 1000).toLocaleString(undefined, {maximumFractionDigits: 0})} 張`;
+            } else if (stock.trigger_vol_rule === "任意成交量皆會觸發 (前5日已達標)") {
+                volThresholdStr = "任意量";
+            }
+
+            // 狀態 badge
+            let badgeClass = "normal";
+            let badgeText = "監控中";
+            if (Math.abs(changeVal) <= 1.0) {
+                badgeClass = "extreme";
+                badgeText = "🔥 極易觸發";
+            } else if (Math.abs(changeVal) <= 4.0) {
+                badgeClass = "warn";
+                badgeText = "⚠️ 重點預警";
+            }
+
+            const tr = document.createElement('tr');
+            tr.setAttribute('data-code', code);
+            tr.classList.add('listening-row');
+            if (selectedStockCode === code) tr.classList.add('selected-row');
+
+            const yesterdayClose = stock.yesterday_close || 0;
+            const currentClose = stock.current_close || 0;
+            const currentVol = stock.current_vol || 0;
+
+            tr.innerHTML = `
+                <td><strong>${code}</strong></td>
+                <td>${name}</td>
+                <td class="text-center">${market}</td>
+                <td class="text-right">${yesterdayClose.toFixed(2)} 元</td>
+                <td class="text-right"><strong>${currentClose.toFixed(2)} 元</strong></td>
+                <td class="text-right">${(currentVol / 1000).toLocaleString(undefined, {maximumFractionDigits: 0})} 張</td>
+                <td class="text-right ${priceClass}" style="font-weight: 600;">${priceThresholdStr}</td>
+                <td class="text-right" style="color: var(--fg-accent-cyan); font-size: 0.9rem;">${volThresholdStr}</td>
+                <td class="text-center"><span class="status-badge ${badgeClass}">${badgeText}</span></td>
+            `;
+
+            tr.addEventListener('click', () => selectStock(stock, tr, 'listening'));
+            listeningTbody.appendChild(tr);
         });
+
+        if (filteredListeningStocks.length === 0) {
+            listeningTbody.innerHTML = `<tr><td colspan="9" class="placeholder-row">☕ 當前無符合過濾條件的聽牌股票</td></tr>`;
+        }
 
         // 異步非同步抓取快取以填補成交量張數 (避免阻塞渲染)
         loadVolumes();
@@ -355,7 +453,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 處理個股選取與切換
     function selectStock(stock, trElement, tableType) {
-        selectedStockCode = stock.Code;
+        selectedStockCode = stock.Code || stock.code;
         
         // 清除所有選取狀態
         const allRows = document.querySelectorAll('tbody tr');
@@ -365,7 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
         trElement.classList.add('selected-row');
 
         // 渲染詳細卡片
-        renderDetailCard(stock);
+        renderDetailCard(stock, tableType);
 
         // 行動裝置滾動
         if (window.innerWidth <= 1024) {
@@ -374,18 +472,152 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 渲染詳細面板 HTML
-    async function renderDetailCard(stock) {
+    async function renderDetailCard(stock, tableType) {
         detailPlaceholder.classList.add('hidden');
         detailCard.classList.remove('hidden');
 
-        const code = stock.Code || "";
-        const name = stock.Name || "";
-        const market = stock.Market || "";
-        const close = stock.Close || "";
-        const reason = stock.Reason || "";
+        const code = stock.Code || stock.code || "";
+        const name = stock.Name || stock.name || "";
+        const market = stock.Market || stock.market || "";
+        const close = stock.Close || (stock.current_close !== undefined ? stock.current_close.toString() : "") || "";
+        const reason = stock.Reason || stock.yesterday_reason || "";
         const isDisposed = stock.IsDisposed || false;
         
-        let closePriceStr = close === "N/A" ? "N/A" : `${parseFloat(close.replace(/,/g, '')).toFixed(2)} 元`;
+        let closePriceStr = close === "N/A" || close === "" ? "N/A" : `${parseFloat(close.replace(/,/g, '')).toFixed(2)} 元`;
+
+        if (tableType === 'listening') {
+            const reasons = stock.reasons || [];
+            const reasonsHtml = reasons.map(r => `• ${r}`).join('<br>');
+            const yesterdayClose = stock.yesterday_close || 0;
+            const currentClose = stock.current_close || 0;
+            const currentVol = stock.current_vol || 0;
+            
+            let priceThresholdHtml = '';
+            (stock.price_thresholds || []).forEach(pt => {
+                const rule = pt.rule || "";
+                const base = pt.base_price || 0;
+                const upP = pt.up_price || 0;
+                const downP = pt.down_price;
+                const isPrimary = pt.is_primary || false;
+                
+                let upNote = '';
+                const upChg = ((upP - currentClose) / currentClose) * 100.0;
+                let upClass = 'up-val';
+                if (upChg > 10.0) {
+                    upNote = ' <span class="status-badge normal" style="padding: 1px 4px; font-size: 0.68rem;">超漲停限制 +10%</span>';
+                } else if (upChg <= 0 && isPrimary) {
+                    upNote = ' <span class="status-badge release" style="padding: 1px 4px; font-size: 0.68rem;">🚨 已達標</span>';
+                    upClass = 'up-val guaranteed';
+                } else if (upChg <= 1.0) {
+                    upNote = ' <span class="status-badge extreme" style="padding: 1px 4px; font-size: 0.68rem;">🔥 極易觸發</span>';
+                } else if (upChg <= 5.0) {
+                    upNote = ' <span class="status-badge warn" style="padding: 1px 4px; font-size: 0.68rem;">⚠️ 重點監控</span>';
+                }
+                
+                let downHtml = '';
+                if (downP !== null) {
+                    const downChg = ((downP - currentClose) / currentClose) * 100.0;
+                    let downNote = '';
+                    let downClass = 'down-val';
+                    if (downChg < -10.0) {
+                        downNote = ' <span class="status-badge normal" style="padding: 1px 4px; font-size: 0.68rem;">超跌停限制 -10%</span>';
+                    } else if (downChg >= 0 && isPrimary) {
+                        downNote = ' <span class="status-badge release" style="padding: 1px 4px; font-size: 0.68rem;">🚨 已達標</span>';
+                    }
+                    downHtml = `<div class="${downClass}">▼ 看跌觸發價: <strong>${downP.toFixed(2)} 元</strong> (跌幅需求: ${downChg.toFixed(2)}%)${downNote}</div>`;
+                }
+                
+                priceThresholdHtml += `
+                    <div class="threshold-row">
+                        <div class="threshold-rule">${isPrimary ? '⭐ ' : '  '}${rule}</div>
+                        <div style="font-size: 0.75rem; color: var(--fg-secondary); margin-bottom: 4px;">基準價: ${base.toFixed(2)} 元</div>
+                        <div class="threshold-values">
+                            <div class="${upClass}">▲ 看漲觸發價: <strong>${upP.toFixed(2)} 元</strong> (漲幅需求: ${upChg > 0 ? '+' : ''}${upChg.toFixed(2)}%)${upNote}</div>
+                            ${downHtml}
+                        </div>
+                    </div>
+                `;
+            });
+            
+            let volumeThresholdHtml = '';
+            (stock.vol_thresholds || []).forEach(vt => {
+                const rule = vt.rule || "";
+                const trigger = vt.trigger_vol || 0;
+                let trigText = '';
+                if (trigger <= 0) {
+                    trigText = '<strong class="vol-val">任意成交量皆會觸發！</strong> (今日已達標)';
+                } else {
+                    const lots = Math.round(trigger / 1000);
+                    trigText = `觸發張數: <strong class="vol-val">${lots.toLocaleString()} 張</strong> (${parseInt(trigger).toLocaleString()} 股)`;
+                }
+                volumeThresholdHtml += `
+                    <div class="threshold-row">
+                        <div class="threshold-rule">${rule}</div>
+                        <div class="threshold-values" style="font-size: 0.8rem;">
+                            <div>${trigText}</div>
+                        </div>
+                    </div>
+                `;
+            });
+            if (volumeThresholdHtml === '') {
+                volumeThresholdHtml = '<p class="detail-text" style="font-style: italic;">本檔個股無特殊量變動公告，預設採用 60日均量 5 倍保底門檻。</p>';
+            }
+            
+            detailCard.innerHTML = `
+                <div>
+                    <h2 class="detail-title">[${code}] ${name} (${market})</h2>
+                    <p class="detail-subtitle">昨日收盤價: <strong>${yesterdayClose.toFixed(2)} 元</strong> | 今日最新: <strong>${currentClose.toFixed(2)} 元</strong></p>
+                    <p class="detail-subtitle" style="margin-top: 5px;">今日成交量: <strong>${(currentVol/1000).toLocaleString(undefined, {maximumFractionDigits:0})} 張</strong></p>
+                </div>
+                <div class="detail-divider"></div>
+                <div class="detail-block" id="kline-container">
+                    <h3 class="detail-section-title">📊 股價歷史走勢與注意門檻</h3>
+                    <div id="chart-loading" style="text-align: center; padding: 20px; color: var(--text-secondary); font-size: 0.85rem;">正在從 Yahoo Finance 獲取即時 K 線...</div>
+                    <canvas id="kline-canvas" class="hidden" style="width: 100%; height: 180px; background: rgba(0,0,0,0.15); border-radius: 8px; border: 1px solid var(--border-color); margin-top: 10px;"></canvas>
+                    <div id="chart-legend" class="hidden" style="display: flex; gap: 15px; font-size: 0.75rem; justify-content: center; margin-top: 5px; color: var(--text-secondary);">
+                        <span style="display: flex; align-items: center; gap: 4px;"><span style="display: inline-block; width: 10px; height: 1px; border-bottom: 2px dashed #ef4444;"></span> 今日看漲門檻</span>
+                        <span style="display: flex; align-items: center; gap: 4px;"><span style="display: inline-block; width: 10px; height: 1px; border-bottom: 2px dashed #10b981;"></span> 今日看跌門檻</span>
+                    </div>
+                </div>
+                <div class="detail-divider"></div>
+                <div class="detail-block">
+                    <h3 class="detail-section-title">🔥 處置聽牌狀態</h3>
+                    <p class="detail-text" style="color: var(--color-yellow); font-weight: 600;">滿足背景原因：</p>
+                    <p class="detail-text" style="font-size: 0.85rem; color: var(--fg-secondary); white-space: pre-wrap;">${reasonsHtml}</p>
+                </div>
+                <div class="detail-divider"></div>
+                <div class="detail-block">
+                    <h3 class="detail-section-title">📢 昨日公告注意原因</h3>
+                    <p class="detail-text" style="font-size: 0.85rem; white-space: pre-wrap;">${stock.yesterday_reason ? stock.yesterday_reason.replace(/﹝/g, '[').replace(/﹞/g, ']') : '無歷史公告原因'}</p>
+                </div>
+                <div class="detail-divider"></div>
+                <div class="detail-block">
+                    <h3 class="detail-section-title">🎯 今日價格注意門檻 (收盤價逆推)</h3>
+                    <div style="display:flex; flex-direction:column; gap:8px;">
+                        ${priceThresholdHtml}
+                    </div>
+                </div>
+                <div class="detail-divider"></div>
+                <div class="detail-block">
+                    <h3 class="detail-section-title">⚡ 今日成交量注意門檻</h3>
+                    <div style="display:flex; flex-direction:column; gap:8px;">
+                        ${volumeThresholdHtml}
+                    </div>
+                </div>
+            `;
+            
+            const mappedCalcs = (stock.price_thresholds || []).map(pt => ({
+                Rule: pt.rule,
+                BasePrice: pt.base_price,
+                TargetUpPrice: pt.up_price,
+                TargetUpChange: ((pt.up_price - currentClose) / currentClose) * 100.0,
+                TargetDownPrice: pt.down_price,
+                TargetDownChange: pt.down_price ? ((pt.down_price - currentClose) / currentClose) * 100.0 : null,
+                IsPrimary: pt.is_primary
+            }));
+            loadAndDrawChart(code, market, false, "", "", mappedCalcs);
+            return;
+        }
 
         if (isDisposed) {
             const disposedPeriod = stock.DisposedPeriod || "";
