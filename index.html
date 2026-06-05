@@ -26,6 +26,7 @@
                         <option value="上櫃">上櫃</option>
                     </select>
                 </div>
+                <button class="nav-btn" onclick="location.href='dashboard.html'" style="background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%); border: none; padding: 8px 16px; border-radius: 8px; color: white; cursor: pointer; font-weight: 600; box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3); transition: all 0.2s; font-family: inherit;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">📊 處置股回測與黃金目標價</button>
             </div>
         </header>
 
@@ -89,13 +90,14 @@
                                     <th>證券名稱</th>
                                     <th class="text-center">市場</th>
                                     <th class="text-right">今日收盤</th>
+                                    <th class="text-right" style="color: var(--color-green);">黃金目標價</th>
                                     <th>處置期間</th>
                                     <th class="text-center">處置狀態</th>
                                 </tr>
                             </thead>
                             <tbody id="disposed-tbody">
                                 <tr>
-                                    <td colspan="6" class="placeholder-row">載入中...</td>
+                                    <td colspan="7" class="placeholder-row">載入中...</td>
                                 </tr>
                             </tbody>
                         </table>
