@@ -296,6 +296,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 tr.addEventListener('click', () => selectStock(stock, tr, 'warning'));
                 warningTbody.appendChild(tr);
             }
+        });
         // 渲染聽牌股列表
         listeningStocks.forEach(stock => {
             const code = stock.code || "";
