@@ -9,7 +9,7 @@
                              {
                                  "Rule":  "6日累積漲跌幅 (標準 32%)",
                                  "BasePrice":  38.200000762939453,
-                                 "TargetUpPrice":  50.50,
+                                 "TargetUpPrice":  50.5,
                                  "TargetUpChange":  2.85,
                                  "TargetDownPrice":  25.95,
                                  "TargetDownChange":  -47.15,
@@ -27,7 +27,7 @@
                              {
                                  "Rule":  "30日累積漲跌幅 (100%)",
                                  "BasePrice":  41.049999237060547,
-                                 "TargetUpPrice":  82.10,
+                                 "TargetUpPrice":  82.1,
                                  "TargetUpChange":  67.21,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -36,7 +36,7 @@
                              {
                                  "Rule":  "60日累積漲跌幅 (130%)",
                                  "BasePrice":  35.450000762939453,
-                                 "TargetUpPrice":  81.60,
+                                 "TargetUpPrice":  81.6,
                                  "TargetUpChange":  66.19,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -45,7 +45,7 @@
                              {
                                  "Rule":  "90日累積漲跌幅 (160%)",
                                  "BasePrice":  33.450000762939453,
-                                 "TargetUpPrice":  87.00,
+                                 "TargetUpPrice":  87,
                                  "TargetUpChange":  77.19,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -55,8 +55,18 @@
         "VolumeCalculations":  [
                                    {
                                        "Rule":  "60日日平均成交量放大倍數 (5 倍)",
-                                       "Baseline":  7993314.43,
-                                       "TriggerVolume":  39966572
+                                       "Baseline":  8706304.1,
+                                       "TriggerVolume":  43531520
+                                   },
+                                   {
+                                       "Rule":  "當日週轉率達 10.0% 門檻",
+                                       "Baseline":  247852723.05909616,
+                                       "TriggerVolume":  24785272
+                                   },
+                                   {
+                                       "Rule":  "6日累積週轉率達 50.0% 門檻 (明日需達 8.60%)",
+                                       "Baseline":  247852723.05909616,
+                                       "TriggerVolume":  21305392
                                    }
                                ]
     },
@@ -70,16 +80,16 @@
                              {
                                  "Rule":  "6日累積漲跌幅 (標準 32%)",
                                  "BasePrice":  43.549999237060547,
-                                 "TargetUpPrice":  57.50,
+                                 "TargetUpPrice":  57.5,
                                  "TargetUpChange":  -3.52,
-                                 "TargetDownPrice":  29.60,
+                                 "TargetDownPrice":  29.6,
                                  "TargetDownChange":  -50.34,
                                  "IsPrimary":  true
                              },
                              {
                                  "Rule":  "6日累積漲跌幅 (今日公告值 161.97%)",
                                  "BasePrice":  43.549999237060547,
-                                 "TargetUpPrice":  114.50,
+                                 "TargetUpPrice":  114.5,
                                  "TargetUpChange":  92.11,
                                  "TargetDownPrice":  -26.99,
                                  "TargetDownChange":  -145.29,
@@ -88,7 +98,7 @@
                              {
                                  "Rule":  "30日累積漲跌幅 (161.97%)",
                                  "BasePrice":  25.649999618530273,
-                                 "TargetUpPrice":  67.20,
+                                 "TargetUpPrice":  67.2,
                                  "TargetUpChange":  12.75,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -106,8 +116,8 @@
                              {
                                  "Rule":  "90日累積漲跌幅 (161.97%)",
                                  "BasePrice":  22.75,
-                                 "TargetUpPrice":  59.60,
-                                 "TargetUpChange":  0.0,
+                                 "TargetUpPrice":  59.6,
+                                 "TargetUpChange":  0,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
                                  "IsPrimary":  true
@@ -116,8 +126,18 @@
         "VolumeCalculations":  [
                                    {
                                        "Rule":  "60日日平均成交量放大倍數 (5 倍)",
-                                       "Baseline":  8716300.03,
-                                       "TriggerVolume":  43581500
+                                       "Baseline":  9142133,
+                                       "TriggerVolume":  45710665
+                                   },
+                                   {
+                                       "Rule":  "當日週轉率達 10.0% 門檻",
+                                       "Baseline":  166341002.60416669,
+                                       "TriggerVolume":  16634100
+                                   },
+                                   {
+                                       "Rule":  "6日累積週轉率達 50.0% 門檻 (明日需達 -26.19%)",
+                                       "Baseline":  166341002.60416669,
+                                       "TriggerVolume":  0
                                    }
                                ]
     },
@@ -131,25 +151,25 @@
                              {
                                  "Rule":  "6日累積漲跌幅 (標準 32%)",
                                  "BasePrice":  50.200000762939453,
-                                 "TargetUpPrice":  66.30,
+                                 "TargetUpPrice":  66.3,
                                  "TargetUpChange":  -3.77,
-                                 "TargetDownPrice":  34.10,
+                                 "TargetDownPrice":  34.1,
                                  "TargetDownChange":  -50.51,
                                  "IsPrimary":  true
                              },
                              {
                                  "Rule":  "6日累積漲跌幅 (今日公告值 31.79%)",
                                  "BasePrice":  50.200000762939453,
-                                 "TargetUpPrice":  66.20,
+                                 "TargetUpPrice":  66.2,
                                  "TargetUpChange":  -3.92,
-                                 "TargetDownPrice":  34.20,
+                                 "TargetDownPrice":  34.2,
                                  "TargetDownChange":  -50.36,
                                  "IsPrimary":  false
                              },
                              {
                                  "Rule":  "30日累積漲跌幅 (100%)",
                                  "BasePrice":  50.5,
-                                 "TargetUpPrice":  101.0,
+                                 "TargetUpPrice":  101,
                                  "TargetUpChange":  46.59,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -158,7 +178,7 @@
                              {
                                  "Rule":  "60日累積漲跌幅 (130%)",
                                  "BasePrice":  51.700000762939453,
-                                 "TargetUpPrice":  119.00,
+                                 "TargetUpPrice":  119,
                                  "TargetUpChange":  72.71,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -167,7 +187,7 @@
                              {
                                  "Rule":  "90日累積漲跌幅 (160%)",
                                  "BasePrice":  56.200000762939453,
-                                 "TargetUpPrice":  146.50,
+                                 "TargetUpPrice":  146.5,
                                  "TargetUpChange":  112.63,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -177,8 +197,18 @@
         "VolumeCalculations":  [
                                    {
                                        "Rule":  "60日日平均成交量放大倍數 (22.02 倍)",
-                                       "Baseline":  670597.03,
-                                       "TriggerVolume":  14766547
+                                       "Baseline":  1061068.9,
+                                       "TriggerVolume":  23364737
+                                   },
+                                   {
+                                       "Rule":  "當日週轉率達 10.0% 門檻",
+                                       "Baseline":  186382752.58552107,
+                                       "TriggerVolume":  18638275
+                                   },
+                                   {
+                                       "Rule":  "6日累積週轉率達 50.0% 門檻 (明日需達 26.43%)",
+                                       "Baseline":  186382752.58552107,
+                                       "TriggerVolume":  49252980
                                    }
                                ]
     },
@@ -192,9 +222,9 @@
                              {
                                  "Rule":  "6日累積漲跌幅 (標準 32%)",
                                  "BasePrice":  66.800003051757813,
-                                 "TargetUpPrice":  88.20,
+                                 "TargetUpPrice":  88.2,
                                  "TargetUpChange":  5.25,
-                                 "TargetDownPrice":  45.40,
+                                 "TargetDownPrice":  45.4,
                                  "TargetDownChange":  -45.82,
                                  "IsPrimary":  true
                              },
@@ -210,7 +240,7 @@
                              {
                                  "Rule":  "60日累積漲跌幅 (130%)",
                                  "BasePrice":  59.799999237060547,
-                                 "TargetUpPrice":  138.00,
+                                 "TargetUpPrice":  138,
                                  "TargetUpChange":  64.68,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -219,8 +249,8 @@
                              {
                                  "Rule":  "90日累積漲跌幅 (177.94%)",
                                  "BasePrice":  30.149999618530273,
-                                 "TargetUpPrice":  83.80,
-                                 "TargetUpChange":  0.0,
+                                 "TargetUpPrice":  83.8,
+                                 "TargetUpChange":  0,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
                                  "IsPrimary":  true
@@ -229,8 +259,8 @@
         "VolumeCalculations":  [
                                    {
                                        "Rule":  "60日日平均成交量放大倍數 (5 倍)",
-                                       "Baseline":  523684.55,
-                                       "TriggerVolume":  2618423
+                                       "Baseline":  550701.35,
+                                       "TriggerVolume":  2753507
                                    }
                                ]
     },
@@ -244,7 +274,7 @@
                              {
                                  "Rule":  "6日累積漲跌幅 (標準 32%)",
                                  "BasePrice":  50.099998474121094,
-                                 "TargetUpPrice":  66.20,
+                                 "TargetUpPrice":  66.2,
                                  "TargetUpChange":  -1.93,
                                  "TargetDownPrice":  34.05,
                                  "TargetDownChange":  -49.56,
@@ -253,7 +283,7 @@
                              {
                                  "Rule":  "6日累積漲跌幅 (今日公告值 33.6%)",
                                  "BasePrice":  50.099998474121094,
-                                 "TargetUpPrice":  67.00,
+                                 "TargetUpPrice":  67,
                                  "TargetUpChange":  -0.74,
                                  "TargetDownPrice":  33.25,
                                  "TargetDownChange":  -50.74,
@@ -271,7 +301,7 @@
                              {
                                  "Rule":  "60日累積漲跌幅 (130%)",
                                  "BasePrice":  33.700000762939453,
-                                 "TargetUpPrice":  77.60,
+                                 "TargetUpPrice":  77.6,
                                  "TargetUpChange":  14.96,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -290,8 +320,18 @@
         "VolumeCalculations":  [
                                    {
                                        "Rule":  "60日日平均成交量放大倍數 (6.93 倍)",
-                                       "Baseline":  2983882.67,
-                                       "TriggerVolume":  20678307
+                                       "Baseline":  3374397.85,
+                                       "TriggerVolume":  23384577
+                                   },
+                                   {
+                                       "Rule":  "當日週轉率達 10.0% 門檻",
+                                       "Baseline":  181494275.75522849,
+                                       "TriggerVolume":  18149428
+                                   },
+                                   {
+                                       "Rule":  "6日累積週轉率達 50.0% 門檻 (明日需達 24.06%)",
+                                       "Baseline":  181494275.75522849,
+                                       "TriggerVolume":  43665365
                                    }
                                ]
     },
@@ -360,8 +400,8 @@
         "VolumeCalculations":  [
                                    {
                                        "Rule":  "60日日平均成交量放大倍數 (5 倍)",
-                                       "Baseline":  899307.65,
-                                       "TriggerVolume":  4496538
+                                       "Baseline":  930867.15,
+                                       "TriggerVolume":  4654336
                                    }
                                ]
     },
@@ -375,18 +415,18 @@
                              {
                                  "Rule":  "6日累積漲跌幅 (標準 32%)",
                                  "BasePrice":  167.5,
-                                 "TargetUpPrice":  221.50,
+                                 "TargetUpPrice":  221.5,
                                  "TargetUpChange":  -8.66,
-                                 "TargetDownPrice":  113.50,
-                                 "TargetDownChange":  -53.20,
+                                 "TargetDownPrice":  113.5,
+                                 "TargetDownChange":  -53.2,
                                  "IsPrimary":  true
                              },
                              {
                                  "Rule":  "6日累積漲跌幅 (今日公告值 37.38%)",
                                  "BasePrice":  167.5,
-                                 "TargetUpPrice":  230.50,
+                                 "TargetUpPrice":  230.5,
                                  "TargetUpChange":  -4.95,
-                                 "TargetDownPrice":  104.50,
+                                 "TargetDownPrice":  104.5,
                                  "TargetDownChange":  -56.91,
                                  "IsPrimary":  false
                              },
@@ -395,8 +435,8 @@
                                  "BasePrice":  167.5,
                                  "TargetUpPrice":  242.5,
                                  "TargetUpChange":  0,
-                                 "TargetDownPrice":  92.5,
-                                 "TargetDownChange":  -61.86,
+                                 "TargetDownPrice":  92.4,
+                                 "TargetDownChange":  -61.9,
                                  "IsPrimary":  true
                              },
                              {
@@ -411,7 +451,7 @@
                              {
                                  "Rule":  "60日累積漲跌幅 (130%)",
                                  "BasePrice":  163.5,
-                                 "TargetUpPrice":  376.50,
+                                 "TargetUpPrice":  376.5,
                                  "TargetUpChange":  55.26,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -430,8 +470,8 @@
         "VolumeCalculations":  [
                                    {
                                        "Rule":  "60日日平均成交量放大倍數 (9.61 倍)",
-                                       "Baseline":  845360.83,
-                                       "TriggerVolume":  8123918
+                                       "Baseline":  1008058.87,
+                                       "TriggerVolume":  9687446
                                    }
                                ]
     },
@@ -472,7 +512,7 @@
                              {
                                  "Rule":  "60日累積漲跌幅 (130%)",
                                  "BasePrice":  5.7699999809265137,
-                                 "TargetUpPrice":  13.30,
+                                 "TargetUpPrice":  13.3,
                                  "TargetUpChange":  16.16,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -481,7 +521,7 @@
                              {
                                  "Rule":  "90日累積漲跌幅 (160%)",
                                  "BasePrice":  6.369999885559082,
-                                 "TargetUpPrice":  16.60,
+                                 "TargetUpPrice":  16.6,
                                  "TargetUpChange":  44.98,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -491,8 +531,8 @@
         "VolumeCalculations":  [
                                    {
                                        "Rule":  "60日日平均成交量放大倍數 (5 倍)",
-                                       "Baseline":  39524516.83,
-                                       "TriggerVolume":  197622584
+                                       "Baseline":  42004955.92,
+                                       "TriggerVolume":  210024780
                                    }
                                ]
     },
@@ -517,8 +557,8 @@
                                  "BasePrice":  2.6700000762939453,
                                  "TargetUpPrice":  3.43,
                                  "TargetUpChange":  -2.28,
-                                 "TargetDownPrice":  1.91,
-                                 "TargetDownChange":  -45.58,
+                                 "TargetDownPrice":  1.9,
+                                 "TargetDownChange":  -45.87,
                                  "IsPrimary":  false
                              },
                              {
@@ -552,8 +592,8 @@
         "VolumeCalculations":  [
                                    {
                                        "Rule":  "60日日平均成交量放大倍數 (18.2 倍)",
-                                       "Baseline":  65083.93,
-                                       "TriggerVolume":  1184528
+                                       "Baseline":  93318.93,
+                                       "TriggerVolume":  1698405
                                    }
                                ]
     },
