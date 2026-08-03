@@ -1,43 +1,43 @@
 ﻿[
     {
-        "Code":  "2104",
-        "Name":  "國際中橡",
+        "Code":  "8039",
+        "Name":  "台虹",
         "Market":  "上市",
-        "Close":  "9.65",
-        "Reason":  "07月30日之最近六個營業日之借券賣出成交量占最近六個營業日總成交量比率16.77%，且07月30日借券賣出成交量較最近六十個營業日之日平均借券賣出成交量放大為5.27倍\u003cfont color=\u0027#FF0000\u0027\u003e﹝第十二款﹞\u003c/font\u003e。",
+        "Close":  "190.50",
+        "Reason":  "07月31日之最近六個營業日之當日沖銷成交量占最近六個營業日總成交量比率60.31%，且07月31日當日沖銷成交量占該日總成交量比率63.59%\u003cfont color=\u0027#FF0000\u0027\u003e﹝第十三款﹞\u003c/font\u003e。",
         "Calculations":  [
                              {
                                  "Rule":  "6日累積漲跌幅 (標準 32%)",
-                                 "BasePrice":  10.350000381469728,
-                                 "TargetUpPrice":  13.7,
-                                 "TargetUpChange":  41.97,
-                                 "TargetDownPrice":  7.03,
-                                 "TargetDownChange":  -27.15,
+                                 "BasePrice":  216,
+                                 "TargetUpPrice":  285.5,
+                                 "TargetUpChange":  49.87,
+                                 "TargetDownPrice":  146.5,
+                                 "TargetDownChange":  -23.1,
                                  "IsPrimary":  true
                              },
                              {
                                  "Rule":  "30日累積漲跌幅 (100%)",
-                                 "BasePrice":  10.399999618530272,
-                                 "TargetUpPrice":  20.8,
-                                 "TargetUpChange":  115.54,
+                                 "BasePrice":  145.5,
+                                 "TargetUpPrice":  291,
+                                 "TargetUpChange":  52.76,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
                                  "IsPrimary":  false
                              },
                              {
                                  "Rule":  "60日累積漲跌幅 (130%)",
-                                 "BasePrice":  10.300000190734863,
-                                 "TargetUpPrice":  23.7,
-                                 "TargetUpChange":  145.6,
+                                 "BasePrice":  135.5,
+                                 "TargetUpPrice":  312,
+                                 "TargetUpChange":  63.78,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
                                  "IsPrimary":  false
                              },
                              {
                                  "Rule":  "90日累積漲跌幅 (160%)",
-                                 "BasePrice":  12.149999618530272,
-                                 "TargetUpPrice":  31.6,
-                                 "TargetUpChange":  227.46,
+                                 "BasePrice":  112.5,
+                                 "TargetUpPrice":  292.5,
+                                 "TargetUpChange":  53.54,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
                                  "IsPrimary":  false
@@ -46,461 +46,9 @@
         "VolumeCalculations":  [
                                    {
                                        "Rule":  "60日日平均成交量放大倍數 (5 倍)",
-                                       "Baseline":  4123781.47,
-                                       "TriggerVolume":  20618907
+                                       "Baseline":  18012528.57,
+                                       "TriggerVolume":  90062643
                                    }
-                               ]
-    },
-    {
-        "Code":  "3189",
-        "Name":  "景碩",
-        "Market":  "上市",
-        "Close":  "635.00",
-        "Reason":  "07月30日之最近六個營業日之當日沖銷成交量占最近六個營業日總成交量比率63.35%，且07月30日當日沖銷成交量占該日總成交量比率73.19%\u003cfont color=\u0027#FF0000\u0027\u003e﹝第十三款﹞\u003c/font\u003e。",
-        "Calculations":  [
-                             {
-                                 "Rule":  "6日累積漲跌幅 (標準 32%)",
-                                 "BasePrice":  711,
-                                 "TargetUpPrice":  939,
-                                 "TargetUpChange":  47.87,
-                                 "TargetDownPrice":  483,
-                                 "TargetDownChange":  -23.94,
-                                 "IsPrimary":  true
-                             },
-                             {
-                                 "Rule":  "30日累積漲跌幅 (100%)",
-                                 "BasePrice":  796,
-                                 "TargetUpPrice":  1595,
-                                 "TargetUpChange":  151.18,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "60日累積漲跌幅 (130%)",
-                                 "BasePrice":  458,
-                                 "TargetUpPrice":  1055,
-                                 "TargetUpChange":  66.14,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "90日累積漲跌幅 (160%)",
-                                 "BasePrice":  320.5,
-                                 "TargetUpPrice":  834,
-                                 "TargetUpChange":  31.34,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             }
-                         ],
-        "VolumeCalculations":  [
-                                   {
-                                       "Rule":  "60日日平均成交量放大倍數 (5 倍)",
-                                       "Baseline":  18983681.12,
-                                       "TriggerVolume":  94918406
-                                   }
-                               ]
-    },
-    {
-        "Code":  "3481",
-        "Name":  "群創",
-        "Market":  "上市",
-        "Close":  "45.50",
-        "Reason":  "07月30日之最近六個營業日之當日沖銷成交量占最近六個營業日總成交量比率63.76%，且07月30日當日沖銷成交量占該日總成交量比率72.27%\u003cfont color=\u0027#FF0000\u0027\u003e﹝第十三款﹞\u003c/font\u003e。",
-        "Calculations":  [
-                             {
-                                 "Rule":  "6日累積漲跌幅 (標準 32%)",
-                                 "BasePrice":  49.5,
-                                 "TargetUpPrice":  65.4,
-                                 "TargetUpChange":  43.74,
-                                 "TargetDownPrice":  33.65,
-                                 "TargetDownChange":  -26.04,
-                                 "IsPrimary":  true
-                             },
-                             {
-                                 "Rule":  "30日累積漲跌幅 (100%)",
-                                 "BasePrice":  66,
-                                 "TargetUpPrice":  132,
-                                 "TargetUpChange":  190.11,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "60日累積漲跌幅 (130%)",
-                                 "BasePrice":  29.399999618530273,
-                                 "TargetUpPrice":  67.7,
-                                 "TargetUpChange":  48.79,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "90日累積漲跌幅 (160%)",
-                                 "BasePrice":  24.5,
-                                 "TargetUpPrice":  63.7,
-                                 "TargetUpChange":  40,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             }
-                         ],
-        "VolumeCalculations":  [
-                                   {
-                                       "Rule":  "60日日平均成交量放大倍數 (5 倍)",
-                                       "Baseline":  537142203.77,
-                                       "TriggerVolume":  2685711019
-                                   }
-                               ]
-    },
-    {
-        "Code":  "6141",
-        "Name":  "柏承",
-        "Market":  "上市",
-        "Close":  "30.10",
-        "Reason":  "最近六個營業日累積收盤價跌幅達33.83%﹝第一款﹞。",
-        "Calculations":  [
-                             {
-                                 "Rule":  "6日累積漲跌幅 (標準 32%)",
-                                 "BasePrice":  38.650001525878906,
-                                 "TargetUpPrice":  51.1,
-                                 "TargetUpChange":  69.77,
-                                 "TargetDownPrice":  26.25,
-                                 "TargetDownChange":  -12.79,
-                                 "IsPrimary":  true
-                             },
-                             {
-                                 "Rule":  "6日累積漲跌幅 (今日公告值 33.83%)",
-                                 "BasePrice":  38.650001525878906,
-                                 "TargetUpPrice":  51.8,
-                                 "TargetUpChange":  72.09,
-                                 "TargetDownPrice":  25.55,
-                                 "TargetDownChange":  -15.12,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "30日累積漲跌幅 (100%)",
-                                 "BasePrice":  35.599998474121094,
-                                 "TargetUpPrice":  71.2,
-                                 "TargetUpChange":  136.54,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "60日累積漲跌幅 (130%)",
-                                 "BasePrice":  33.099998474121094,
-                                 "TargetUpPrice":  76.2,
-                                 "TargetUpChange":  153.16,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "90日累積漲跌幅 (160%)",
-                                 "BasePrice":  21.100000381469727,
-                                 "TargetUpPrice":  54.9,
-                                 "TargetUpChange":  82.39,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             }
-                         ],
-        "VolumeCalculations":  [
-                                   {
-                                       "Rule":  "60日日平均成交量放大倍數 (5 倍)",
-                                       "Baseline":  2630404.77,
-                                       "TriggerVolume":  13152024
-                                   }
-                               ]
-    },
-    {
-        "Code":  "6451",
-        "Name":  "訊芯-KY",
-        "Market":  "上市",
-        "Close":  "341.00",
-        "Reason":  "最近六個營業日累積收盤價跌幅達25.21%。且六個營業日起迄兩個營業日收盤價價差達96.29 元﹝第一款﹞。",
-        "Calculations":  [
-                             {
-                                 "Rule":  "6日累積漲跌幅 (標準 32%)",
-                                 "BasePrice":  437.5,
-                                 "TargetUpPrice":  578,
-                                 "TargetUpChange":  69.5,
-                                 "TargetDownPrice":  297.5,
-                                 "TargetDownChange":  -12.76,
-                                 "IsPrimary":  true
-                             },
-                             {
-                                 "Rule":  "6日累積漲跌幅 (今日公告值 25.21%)",
-                                 "BasePrice":  437.5,
-                                 "TargetUpPrice":  548,
-                                 "TargetUpChange":  60.7,
-                                 "TargetDownPrice":  327,
-                                 "TargetDownChange":  -4.11,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "6日收盤價差 (96.29 元) 且為最高/最低",
-                                 "BasePrice":  437.5,
-                                 "TargetUpPrice":  534,
-                                 "TargetUpChange":  56.6,
-                                 "TargetDownPrice":  322,
-                                 "TargetDownChange":  -5.57,
-                                 "IsPrimary":  true
-                             },
-                             {
-                                 "Rule":  "30日累積漲跌幅 (100%)",
-                                 "BasePrice":  617,
-                                 "TargetUpPrice":  1235,
-                                 "TargetUpChange":  262.17,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "60日累積漲跌幅 (130%)",
-                                 "BasePrice":  441,
-                                 "TargetUpPrice":  1015,
-                                 "TargetUpChange":  197.65,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "90日累積漲跌幅 (160%)",
-                                 "BasePrice":  290,
-                                 "TargetUpPrice":  754,
-                                 "TargetUpChange":  121.11,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             }
-                         ],
-        "VolumeCalculations":  [
-                                   {
-                                       "Rule":  "60日日平均成交量放大倍數 (5 倍)",
-                                       "Baseline":  5235120.7,
-                                       "TriggerVolume":  26175604
-                                   }
-                               ]
-    },
-    {
-        "Code":  "6715",
-        "Name":  "嘉基",
-        "Market":  "上市",
-        "Close":  "311.00",
-        "Reason":  "最近六個營業日累積收盤價跌幅達29.49%。且六個營業日起迄兩個營業日收盤價價差達113.42元﹝第一款﹞。",
-        "Calculations":  [
-                             {
-                                 "Rule":  "6日累積漲跌幅 (標準 32%)",
-                                 "BasePrice":  420.61126708984375,
-                                 "TargetUpPrice":  556,
-                                 "TargetUpChange":  78.78,
-                                 "TargetDownPrice":  286,
-                                 "TargetDownChange":  -8.04,
-                                 "IsPrimary":  true
-                             },
-                             {
-                                 "Rule":  "6日累積漲跌幅 (今日公告值 29.49%)",
-                                 "BasePrice":  420.61126708984375,
-                                 "TargetUpPrice":  545,
-                                 "TargetUpChange":  75.24,
-                                 "TargetDownPrice":  296.5,
-                                 "TargetDownChange":  -4.66,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "6日收盤價差 (113.42 元) 且為最高/最低",
-                                 "BasePrice":  420.61126708984375,
-                                 "TargetUpPrice":  535,
-                                 "TargetUpChange":  72.03,
-                                 "TargetDownPrice":  294.5,
-                                 "TargetDownChange":  -5.31,
-                                 "IsPrimary":  true
-                             },
-                             {
-                                 "Rule":  "30日累積漲跌幅 (100%)",
-                                 "BasePrice":  518,
-                                 "TargetUpPrice":  1040,
-                                 "TargetUpChange":  234.41,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "60日累積漲跌幅 (130%)",
-                                 "BasePrice":  445,
-                                 "TargetUpPrice":  1025,
-                                 "TargetUpChange":  229.58,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "90日累積漲跌幅 (160%)",
-                                 "BasePrice":  277,
-                                 "TargetUpPrice":  721,
-                                 "TargetUpChange":  131.83,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             }
-                         ],
-        "VolumeCalculations":  [
-                                   {
-                                       "Rule":  "60日日平均成交量放大倍數 (5 倍)",
-                                       "Baseline":  719406.87,
-                                       "TriggerVolume":  3597034
-                                   }
-                               ]
-    },
-    {
-        "Code":  "8261",
-        "Name":  "富鼎",
-        "Market":  "上市",
-        "Close":  "163.50",
-        "Reason":  "最近六個營業日累積收盤價跌幅達34.30%。且六個營業日起迄兩個營業日收盤價價差達53.50 元﹝第一款﹞。且07月31日之週轉率為12.34%﹝第四款﹞。",
-        "Calculations":  [
-                             {
-                                 "Rule":  "6日累積漲跌幅 (標準 32%)",
-                                 "BasePrice":  217,
-                                 "TargetUpPrice":  286.5,
-                                 "TargetUpChange":  75.23,
-                                 "TargetDownPrice":  147.5,
-                                 "TargetDownChange":  -9.79,
-                                 "IsPrimary":  true
-                             },
-                             {
-                                 "Rule":  "6日累積漲跌幅 (今日公告值 34.3%)",
-                                 "BasePrice":  217,
-                                 "TargetUpPrice":  291.5,
-                                 "TargetUpChange":  78.29,
-                                 "TargetDownPrice":  142.5,
-                                 "TargetDownChange":  -12.84,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "6日收盤價差 (53.5 元) 且為最高/最低",
-                                 "BasePrice":  217,
-                                 "TargetUpPrice":  270.5,
-                                 "TargetUpChange":  65.44,
-                                 "TargetDownPrice":  158,
-                                 "TargetDownChange":  -3.36,
-                                 "IsPrimary":  true
-                             },
-                             {
-                                 "Rule":  "30日累積漲跌幅 (100%)",
-                                 "BasePrice":  236.5,
-                                 "TargetUpPrice":  473,
-                                 "TargetUpChange":  189.3,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "60日累積漲跌幅 (130%)",
-                                 "BasePrice":  126,
-                                 "TargetUpPrice":  290,
-                                 "TargetUpChange":  77.37,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "90日累積漲跌幅 (160%)",
-                                 "BasePrice":  105.5,
-                                 "TargetUpPrice":  274.5,
-                                 "TargetUpChange":  67.89,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             }
-                         ],
-        "VolumeCalculations":  [
-                                   {
-                                       "Rule":  "60日日平均成交量放大倍數 (5 倍)",
-                                       "Baseline":  10087658.33,
-                                       "TriggerVolume":  50438292
-                                   },
-                                   {
-                                       "Rule":  "當日週轉率達 10.0% 門檻",
-                                       "Baseline":  117133525.12155592,
-                                       "TriggerVolume":  11713353
-                                   },
-                                   {
-                                       "Rule":  "6日累積週轉率達 50.0% 門檻 (明日需達 20.96%)",
-                                       "Baseline":  117133525.12155592,
-                                       "TriggerVolume":  24549751
-                                   }
-                               ]
-    },
-    {
-        "Code":  "8271",
-        "Name":  "宇瞻",
-        "Market":  "上市",
-        "Close":  "223.00",
-        "Reason":  "07月30日之最近六個營業日之當日沖銷成交量占最近六個營業日總成交量比率61.74%，且07月30日當日沖銷成交量占該日總成交量比率69.45%\u003cfont color=\u0027#FF0000\u0027\u003e﹝第十三款﹞\u003c/font\u003e。",
-        "Calculations":  [
-                             {
-                                 "Rule":  "6日累積漲跌幅 (標準 32%)",
-                                 "BasePrice":  212.5,
-                                 "TargetUpPrice":  280.5,
-                                 "TargetUpChange":  25.78,
-                                 "TargetDownPrice":  144.5,
-                                 "TargetDownChange":  -35.2,
-                                 "IsPrimary":  true
-                             },
-                             {
-                                 "Rule":  "30日累積漲跌幅 (100%)",
-                                 "BasePrice":  215.5,
-                                 "TargetUpPrice":  431,
-                                 "TargetUpChange":  93.27,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "60日累積漲跌幅 (130%)",
-                                 "BasePrice":  260.5,
-                                 "TargetUpPrice":  600,
-                                 "TargetUpChange":  169.06,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             },
-                             {
-                                 "Rule":  "90日累積漲跌幅 (160%)",
-                                 "BasePrice":  153.5,
-                                 "TargetUpPrice":  399.5,
-                                 "TargetUpChange":  79.15,
-                                 "TargetDownPrice":  null,
-                                 "TargetDownChange":  null,
-                                 "IsPrimary":  false
-                             }
-                         ],
-        "VolumeCalculations":  [
-                                   {
-                                       "Rule":  "60日日平均成交量放大倍數 (5 倍)",
-                                       "Baseline":  4672730.72,
-                                       "TriggerVolume":  23363654
-                                   }
-                               ]
-    },
-    {
-        "Code":  "8383",
-        "Name":  "千附",
-        "Market":  "上櫃",
-        "Close":  "87.0999984741211",
-        "Reason":  "【已處置有價證券】處置期間: 1150720~1150731 。現正執行人工管制撮合及預收款券等處置措施。",
-        "IsDisposed":  true,
-        "DisposedPeriod":  "1150720~1150731",
-        "Calculations":  [
-
-                         ],
-        "VolumeCalculations":  [
-
                                ]
     },
     {
@@ -522,7 +70,7 @@
         "Code":  "3026",
         "Name":  "禾伸堂",
         "Market":  "上市",
-        "Close":  "450.00",
+        "Close":  "459.50",
         "Reason":  "【已處置有價證券】處置期間: 115/07/22～115/08/04 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "115/07/22～115/08/04",
@@ -582,7 +130,7 @@
         "Code":  "3055",
         "Name":  "蔚華科",
         "Market":  "上市",
-        "Close":  "90.40",
+        "Close":  "93.10",
         "Reason":  "【已處置有價證券】處置期間: 115/07/31～115/08/13 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "115/07/31～115/08/13",
@@ -612,7 +160,7 @@
         "Code":  "3532",
         "Name":  "台勝科",
         "Market":  "上市",
-        "Close":  "271.50",
+        "Close":  "265.00",
         "Reason":  "【已處置有價證券】處置期間: 115/07/31～115/08/13 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "115/07/31～115/08/13",
@@ -657,7 +205,7 @@
         "Code":  "8046",
         "Name":  "南電",
         "Market":  "上市",
-        "Close":  "920.00",
+        "Close":  "920",
         "Reason":  "【已處置有價證券】處置期間: 115/08/03～115/08/18 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "115/08/03～115/08/18",
@@ -687,7 +235,7 @@
         "Code":  "45421",
         "Name":  "科嶠一",
         "Market":  "上櫃",
-        "Close":  "273.00",
+        "Close":  "N/A",
         "Reason":  "【已處置有價證券】處置期間: 1150731~1150813 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "1150731~1150813",
@@ -717,7 +265,7 @@
         "Code":  "6217",
         "Name":  "中探針",
         "Market":  "上櫃",
-        "Close":  "111.00",
+        "Close":  "169",
         "Reason":  "【已處置有價證券】處置期間: 1150723~1150805 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "1150723~1150805",
@@ -792,7 +340,7 @@
         "Code":  "6739",
         "Name":  "竹陞科技",
         "Market":  "上櫃",
-        "Close":  "821.00",
+        "Close":  "768",
         "Reason":  "【已處置有價證券】處置期間: 1150803~1150814 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "1150803~1150814",
@@ -807,7 +355,7 @@
         "Code":  "4169",
         "Name":  "泰宗",
         "Market":  "上市",
-        "Close":  "165.00",
+        "Close":  "160.50",
         "Reason":  "【已處置有價證券】處置期間: 115/08/03～115/08/14 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "115/08/03～115/08/14",
@@ -822,7 +370,7 @@
         "Code":  "61828",
         "Name":  "合晶八",
         "Market":  "上櫃",
-        "Close":  "260.00",
+        "Close":  "N/A",
         "Reason":  "【已處置有價證券】處置期間: 1150724~1150810 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "1150724~1150810",
@@ -897,7 +445,7 @@
         "Code":  "911608",
         "Name":  "明輝-DR",
         "Market":  "上市",
-        "Close":  "2.61",
+        "Close":  "2.8299999237060547",
         "Reason":  "【已處置有價證券】處置期間: 115/07/27～115/08/07 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "115/07/27～115/08/07",
@@ -1017,7 +565,7 @@
         "Code":  "7610",
         "Name":  "聯友金屬-創",
         "Market":  "上市",
-        "Close":  "1200.00",
+        "Close":  "1660",
         "Reason":  "【已處置有價證券】處置期間: 115/07/27～115/08/07 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "115/07/27～115/08/07",
@@ -1077,7 +625,7 @@
         "Code":  "3624",
         "Name":  "光頡",
         "Market":  "上櫃",
-        "Close":  "62.50",
+        "Close":  "89.5",
         "Reason":  "【已處置有價證券】處置期間: 1150722~1150804 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "1150722~1150804",
@@ -1092,7 +640,7 @@
         "Code":  "7828",
         "Name":  "創新服務",
         "Market":  "上櫃",
-        "Close":  "1340.00",
+        "Close":  "1220",
         "Reason":  "【已處置有價證券】處置期間: 1150803~1150814 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "1150803~1150814",
@@ -1107,7 +655,7 @@
         "Code":  "3167",
         "Name":  "大量",
         "Market":  "上市",
-        "Close":  "486.00",
+        "Close":  "688",
         "Reason":  "【已處置有價證券】處置期間: 115/07/24～115/08/06 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "115/07/24～115/08/06",
@@ -1137,7 +685,7 @@
         "Code":  "6182",
         "Name":  "合晶",
         "Market":  "上櫃",
-        "Close":  "89.00",
+        "Close":  "129",
         "Reason":  "【已處置有價證券】處置期間: 1150724~1150810 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "1150724~1150810",
@@ -1182,7 +730,7 @@
         "Code":  "6531",
         "Name":  "愛普*",
         "Market":  "上市",
-        "Close":  "667.00",
+        "Close":  "667",
         "Reason":  "【已處置有價證券】處置期間: 115/08/03～115/08/14 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "115/08/03～115/08/14",
