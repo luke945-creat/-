@@ -1,43 +1,82 @@
 ﻿[
     {
-        "Code":  "8039",
-        "Name":  "台虹",
+        "Code":  "053859",
+        "Name":  "強茂統一61購02",
         "Market":  "上市",
-        "Close":  "190.50",
-        "Reason":  "07月31日之最近六個營業日之當日沖銷成交量占最近六個營業日總成交量比率60.31%，且07月31日當日沖銷成交量占該日總成交量比率63.59%\u003cfont color=\u0027#FF0000\u0027\u003e﹝第十三款﹞\u003c/font\u003e。",
+        "Close":  "1.32",
+        "Reason":  "最近六個營業日累積收盤價跌幅達48.11%﹝第一款﹞。",
         "Calculations":  [
                              {
                                  "Rule":  "6日累積漲跌幅 (標準 32%)",
-                                 "BasePrice":  216,
-                                 "TargetUpPrice":  285.5,
-                                 "TargetUpChange":  49.87,
-                                 "TargetDownPrice":  146.5,
-                                 "TargetDownChange":  -23.1,
+                                 "BasePrice":  1.24,
+                                 "TargetUpPrice":  1.64,
+                                 "TargetUpChange":  24.24,
+                                 "TargetDownPrice":  0.83,
+                                 "TargetDownChange":  -37.12,
+                                 "IsPrimary":  true
+                             },
+                             {
+                                 "Rule":  "6日累積漲跌幅 (今日公告值 48.11%)",
+                                 "BasePrice":  1.24,
+                                 "TargetUpPrice":  1.84,
+                                 "TargetUpChange":  39.39,
+                                 "TargetDownPrice":  0.64,
+                                 "TargetDownChange":  -51.52,
+                                 "IsPrimary":  false
+                             },
+                             {
+                                 "Rule":  "30日累積漲跌幅 (100%)",
+                                 "BasePrice":  0.65,
+                                 "TargetUpPrice":  1.3,
+                                 "TargetUpChange":  -1.52,
+                                 "TargetDownPrice":  null,
+                                 "TargetDownChange":  null,
+                                 "IsPrimary":  false
+                             }
+                         ],
+        "VolumeCalculations":  [
+
+                               ]
+    },
+    {
+        "Code":  "2332",
+        "Name":  "友訊",
+        "Market":  "上市",
+        "Close":  "23.85",
+        "Reason":  "最近六個營業日之累積週轉率為75.40%。且08月04日之週轉率為11.61%\u003cfont color=\u0027#FF0000\u0027\u003e﹝第十款﹞\u003c/font\u003e。",
+        "Calculations":  [
+                             {
+                                 "Rule":  "6日累積漲跌幅 (標準 32%)",
+                                 "BasePrice":  23.600000381469727,
+                                 "TargetUpPrice":  31.15,
+                                 "TargetUpChange":  30.61,
+                                 "TargetDownPrice":  16,
+                                 "TargetDownChange":  -32.91,
                                  "IsPrimary":  true
                              },
                              {
                                  "Rule":  "30日累積漲跌幅 (100%)",
-                                 "BasePrice":  145.5,
-                                 "TargetUpPrice":  291,
-                                 "TargetUpChange":  52.76,
+                                 "BasePrice":  18.450000762939453,
+                                 "TargetUpPrice":  36.9,
+                                 "TargetUpChange":  54.72,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
                                  "IsPrimary":  false
                              },
                              {
                                  "Rule":  "60日累積漲跌幅 (130%)",
-                                 "BasePrice":  135.5,
-                                 "TargetUpPrice":  312,
-                                 "TargetUpChange":  63.78,
+                                 "BasePrice":  14.050000190734863,
+                                 "TargetUpPrice":  32.35,
+                                 "TargetUpChange":  35.64,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
                                  "IsPrimary":  false
                              },
                              {
                                  "Rule":  "90日累積漲跌幅 (160%)",
-                                 "BasePrice":  112.5,
-                                 "TargetUpPrice":  292.5,
-                                 "TargetUpChange":  53.54,
+                                 "BasePrice":  15.300000190734863,
+                                 "TargetUpPrice":  39.8,
+                                 "TargetUpChange":  66.88,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
                                  "IsPrimary":  false
@@ -46,8 +85,80 @@
         "VolumeCalculations":  [
                                    {
                                        "Rule":  "60日日平均成交量放大倍數 (5 倍)",
-                                       "Baseline":  18012528.57,
-                                       "TriggerVolume":  90062643
+                                       "Baseline":  26569982.77,
+                                       "TriggerVolume":  132849914
+                                   },
+                                   {
+                                       "Rule":  "當日週轉率達 10.0% 門檻",
+                                       "Baseline":  92683870.026525185,
+                                       "TriggerVolume":  9268387
+                                   },
+                                   {
+                                       "Rule":  "6日累積週轉率達 50.0% 門檻 (明日需達 -337.08%)",
+                                       "Baseline":  92683870.026525185,
+                                       "TriggerVolume":  0
+                                   }
+                               ]
+    },
+    {
+        "Code":  "6226",
+        "Name":  "光鼎",
+        "Market":  "上市",
+        "Close":  "22.00",
+        "Reason":  "最近六個營業日之累積週轉率為127.85% 。且08月04日之週轉率為21.97%\u003cfont color=\u0027#FF0000\u0027\u003e﹝第十款﹞\u003c/font\u003e。",
+        "Calculations":  [
+                             {
+                                 "Rule":  "6日累積漲跌幅 (標準 32%)",
+                                 "BasePrice":  20.5,
+                                 "TargetUpPrice":  27.1,
+                                 "TargetUpChange":  23.18,
+                                 "TargetDownPrice":  13.9,
+                                 "TargetDownChange":  -36.82,
+                                 "IsPrimary":  true
+                             },
+                             {
+                                 "Rule":  "30日累積漲跌幅 (100%)",
+                                 "BasePrice":  15.100000381469728,
+                                 "TargetUpPrice":  30.2,
+                                 "TargetUpChange":  37.27,
+                                 "TargetDownPrice":  null,
+                                 "TargetDownChange":  null,
+                                 "IsPrimary":  false
+                             },
+                             {
+                                 "Rule":  "60日累積漲跌幅 (130%)",
+                                 "BasePrice":  12.550000190734863,
+                                 "TargetUpPrice":  28.9,
+                                 "TargetUpChange":  31.36,
+                                 "TargetDownPrice":  null,
+                                 "TargetDownChange":  null,
+                                 "IsPrimary":  false
+                             },
+                             {
+                                 "Rule":  "90日累積漲跌幅 (160%)",
+                                 "BasePrice":  12.449999809265137,
+                                 "TargetUpPrice":  32.4,
+                                 "TargetUpChange":  47.27,
+                                 "TargetDownPrice":  null,
+                                 "TargetDownChange":  null,
+                                 "IsPrimary":  false
+                             }
+                         ],
+        "VolumeCalculations":  [
+                                   {
+                                       "Rule":  "60日日平均成交量放大倍數 (5 倍)",
+                                       "Baseline":  7066378.7,
+                                       "TriggerVolume":  35331894
+                                   },
+                                   {
+                                       "Rule":  "當日週轉率達 10.0% 門檻",
+                                       "Baseline":  19826077.434493549,
+                                       "TriggerVolume":  1982608
+                                   },
+                                   {
+                                       "Rule":  "6日累積週轉率達 50.0% 門檻 (明日需達 -576.11%)",
+                                       "Baseline":  19826077.434493549,
+                                       "TriggerVolume":  0
                                    }
                                ]
     },
@@ -70,7 +181,7 @@
         "Code":  "3026",
         "Name":  "禾伸堂",
         "Market":  "上市",
-        "Close":  "459.50",
+        "Close":  "682",
         "Reason":  "【已處置有價證券】處置期間: 115/07/22～115/08/04 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "115/07/22～115/08/04",
@@ -82,13 +193,13 @@
                                ]
     },
     {
-        "Code":  "6173",
-        "Name":  "信昌電",
+        "Code":  "3362",
+        "Name":  "先進光",
         "Market":  "上櫃",
-        "Close":  "231.5",
-        "Reason":  "【已處置有價證券】處置期間: 1150722~1150804 。現正執行人工管制撮合及預收款券等處置措施。",
+        "Close":  "179.50",
+        "Reason":  "【已處置有價證券】處置期間: 1150805~1150820 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
-        "DisposedPeriod":  "1150722~1150804",
+        "DisposedPeriod":  "1150805~1150820",
         "Calculations":  [
 
                          ],
@@ -130,7 +241,7 @@
         "Code":  "3055",
         "Name":  "蔚華科",
         "Market":  "上市",
-        "Close":  "93.10",
+        "Close":  "93.1999969482422",
         "Reason":  "【已處置有價證券】處置期間: 115/07/31～115/08/13 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "115/07/31～115/08/13",
@@ -160,7 +271,7 @@
         "Code":  "3532",
         "Name":  "台勝科",
         "Market":  "上市",
-        "Close":  "265.00",
+        "Close":  "277.5",
         "Reason":  "【已處置有價證券】處置期間: 115/07/31～115/08/13 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "115/07/31～115/08/13",
@@ -191,9 +302,9 @@
         "Name":  "馬光-KY",
         "Market":  "上櫃",
         "Close":  "38",
-        "Reason":  "【已處置有價證券】處置期間: 1150721~1150803 。現正執行人工管制撮合及預收款券等處置措施。",
+        "Reason":  "【已處置有價證券】處置期間: 1150724~1150806 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
-        "DisposedPeriod":  "1150721~1150803",
+        "DisposedPeriod":  "1150724~1150806",
         "Calculations":  [
 
                          ],
@@ -232,10 +343,25 @@
                                ]
     },
     {
+        "Code":  "4556",
+        "Name":  "旭然",
+        "Market":  "上櫃",
+        "Close":  "81.00",
+        "Reason":  "【已處置有價證券】處置期間: 1150804~1150817 。現正執行人工管制撮合及預收款券等處置措施。",
+        "IsDisposed":  true,
+        "DisposedPeriod":  "1150804~1150817",
+        "Calculations":  [
+
+                         ],
+        "VolumeCalculations":  [
+
+                               ]
+    },
+    {
         "Code":  "45421",
         "Name":  "科嶠一",
         "Market":  "上櫃",
-        "Close":  "N/A",
+        "Close":  "316.00",
         "Reason":  "【已處置有價證券】處置期間: 1150731~1150813 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "1150731~1150813",
@@ -355,7 +481,7 @@
         "Code":  "4169",
         "Name":  "泰宗",
         "Market":  "上市",
-        "Close":  "160.50",
+        "Close":  "165",
         "Reason":  "【已處置有價證券】處置期間: 115/08/03～115/08/14 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "115/08/03～115/08/14",
@@ -397,13 +523,13 @@
                                ]
     },
     {
-        "Code":  "2492",
-        "Name":  "華新科",
-        "Market":  "上市",
-        "Close":  "379",
-        "Reason":  "【已處置有價證券】處置期間: 115/07/21～115/08/03 。現正執行人工管制撮合及預收款券等處置措施。",
+        "Code":  "6173",
+        "Name":  "信昌電",
+        "Market":  "上櫃",
+        "Close":  "231.5",
+        "Reason":  "【已處置有價證券】處置期間: 1150722~1150804 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
-        "DisposedPeriod":  "115/07/21～115/08/03",
+        "DisposedPeriod":  "1150722~1150804",
         "Calculations":  [
 
                          ],
@@ -445,7 +571,7 @@
         "Code":  "911608",
         "Name":  "明輝-DR",
         "Market":  "上市",
-        "Close":  "2.8299999237060547",
+        "Close":  "2.80",
         "Reason":  "【已處置有價證券】處置期間: 115/07/27～115/08/07 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "115/07/27～115/08/07",
@@ -494,6 +620,21 @@
         "Reason":  "【已處置有價證券】處置期間: 1150731~1150813 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "1150731~1150813",
+        "Calculations":  [
+
+                         ],
+        "VolumeCalculations":  [
+
+                               ]
+    },
+    {
+        "Code":  "33621",
+        "Name":  "先進光一",
+        "Market":  "上櫃",
+        "Close":  "N/A",
+        "Reason":  "【已處置有價證券】處置期間: 1150805~1150820 。現正執行人工管制撮合及預收款券等處置措施。",
+        "IsDisposed":  true,
+        "DisposedPeriod":  "1150805~1150820",
         "Calculations":  [
 
                          ],
@@ -640,7 +781,7 @@
         "Code":  "7828",
         "Name":  "創新服務",
         "Market":  "上櫃",
-        "Close":  "1220",
+        "Close":  "1610.00",
         "Reason":  "【已處置有價證券】處置期間: 1150803~1150814 。現正執行人工管制撮合及預收款券等處置措施。",
         "IsDisposed":  true,
         "DisposedPeriod":  "1150803~1150814",
