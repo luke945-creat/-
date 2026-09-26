@@ -79,25 +79,25 @@
                              {
                                  "Rule":  "6日累積漲跌幅 (標準 32%)",
                                  "BasePrice":  115.5,
-                                 "TargetUpPrice":  152.5,
+                                 "TargetUpPrice":  152.50,
                                  "TargetUpChange":  -4.69,
-                                 "TargetDownPrice":  78.5,
+                                 "TargetDownPrice":  78.50,
                                  "TargetDownChange":  -50.94,
                                  "IsPrimary":  true
                              },
                              {
                                  "Rule":  "6日累積漲跌幅 (今日公告值 34.01%)",
                                  "BasePrice":  115.5,
-                                 "TargetUpPrice":  155,
+                                 "TargetUpPrice":  155.00,
                                  "TargetUpChange":  -3.12,
-                                 "TargetDownPrice":  76.2,
-                                 "TargetDownChange":  -52.37,
+                                 "TargetDownPrice":  76.20,
+                                 "TargetDownChange":  -52.38,
                                  "IsPrimary":  false
                              },
                              {
                                  "Rule":  "30日累積漲跌幅 (100%)",
                                  "BasePrice":  102.5,
-                                 "TargetUpPrice":  205,
+                                 "TargetUpPrice":  205.0,
                                  "TargetUpChange":  28.12,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -106,8 +106,8 @@
                              {
                                  "Rule":  "60日累積漲跌幅 (130%)",
                                  "BasePrice":  135.5,
-                                 "TargetUpPrice":  312,
-                                 "TargetUpChange":  95,
+                                 "TargetUpPrice":  312.00,
+                                 "TargetUpChange":  95.00,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
                                  "IsPrimary":  false
@@ -115,7 +115,7 @@
                              {
                                  "Rule":  "90日累積漲跌幅 (160%)",
                                  "BasePrice":  115.5,
-                                 "TargetUpPrice":  300.5,
+                                 "TargetUpPrice":  300.50,
                                  "TargetUpChange":  87.81,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -168,7 +168,7 @@
                              {
                                  "Rule":  "60日累積漲跌幅 (130%)",
                                  "BasePrice":  152.5,
-                                 "TargetUpPrice":  351,
+                                 "TargetUpPrice":  351.00,
                                  "TargetUpChange":  76.38,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -177,7 +177,7 @@
                              {
                                  "Rule":  "90日累積漲跌幅 (160%)",
                                  "BasePrice":  116.5,
-                                 "TargetUpPrice":  303,
+                                 "TargetUpPrice":  303.00,
                                  "TargetUpChange":  52.26,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -344,17 +344,17 @@
                              {
                                  "Rule":  "6日累積漲跌幅 (標準 32%)",
                                  "BasePrice":  38.75,
-                                 "TargetUpPrice":  51.2,
+                                 "TargetUpPrice":  51.20,
                                  "TargetUpChange":  15.06,
-                                 "TargetDownPrice":  26.3,
-                                 "TargetDownChange":  -40.9,
+                                 "TargetDownPrice":  26.35,
+                                 "TargetDownChange":  -40.79,
                                  "IsPrimary":  true
                              },
                              {
                                  "Rule":  "6日累積漲跌幅 (今日公告值 25.27%)",
                                  "BasePrice":  38.75,
                                  "TargetUpPrice":  48.55,
-                                 "TargetUpChange":  9.1,
+                                 "TargetUpChange":  9.10,
                                  "TargetDownPrice":  28.95,
                                  "TargetDownChange":  -34.94,
                                  "IsPrimary":  false
@@ -380,7 +380,7 @@
                              {
                                  "Rule":  "90日累積漲跌幅 (160%)",
                                  "BasePrice":  44.150001525878906,
-                                 "TargetUpPrice":  115,
+                                 "TargetUpPrice":  115.00,
                                  "TargetUpChange":  158.43,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -442,7 +442,7 @@
                              {
                                  "Rule":  "90日累積漲跌幅 (160%)",
                                  "BasePrice":  262.5,
-                                 "TargetUpPrice":  683,
+                                 "TargetUpPrice":  683.00,
                                  "TargetUpChange":  75.58,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -547,18 +547,18 @@
                              {
                                  "Rule":  "6日累積漲跌幅 (標準 32%)",
                                  "BasePrice":  128.5,
-                                 "TargetUpPrice":  170,
+                                 "TargetUpPrice":  170.00,
                                  "TargetUpChange":  -3.68,
-                                 "TargetDownPrice":  87.3,
+                                 "TargetDownPrice":  87.30,
                                  "TargetDownChange":  -50.54,
                                  "IsPrimary":  true
                              },
                              {
                                  "Rule":  "6日累積漲跌幅 (今日公告值 35.54%)",
                                  "BasePrice":  128.5,
-                                 "TargetUpPrice":  174.5,
+                                 "TargetUpPrice":  174.50,
                                  "TargetUpChange":  -1.13,
-                                 "TargetDownPrice":  82.8,
+                                 "TargetDownPrice":  82.80,
                                  "TargetDownChange":  -53.09,
                                  "IsPrimary":  false
                              },
@@ -583,7 +583,7 @@
                              {
                                  "Rule":  "90日累積漲跌幅 (160%)",
                                  "BasePrice":  130.5,
-                                 "TargetUpPrice":  339.5,
+                                 "TargetUpPrice":  339.50,
                                  "TargetUpChange":  92.35,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -608,25 +608,25 @@
                              {
                                  "Rule":  "6日累積漲跌幅 (標準 32%)",
                                  "BasePrice":  86.699996948242188,
-                                 "TargetUpPrice":  114.5,
+                                 "TargetUpPrice":  114.50,
                                  "TargetUpChange":  2.23,
-                                 "TargetDownPrice":  58.9,
+                                 "TargetDownPrice":  58.90,
                                  "TargetDownChange":  -47.41,
                                  "IsPrimary":  true
                              },
                              {
                                  "Rule":  "6日累積漲跌幅 (今日公告值 26.04%)",
                                  "BasePrice":  86.699996948242188,
-                                 "TargetUpPrice":  109.5,
+                                 "TargetUpPrice":  109.50,
                                  "TargetUpChange":  -2.23,
-                                 "TargetDownPrice":  64.1,
+                                 "TargetDownPrice":  64.10,
                                  "TargetDownChange":  -42.77,
                                  "IsPrimary":  false
                              },
                              {
                                  "Rule":  "30日累積漲跌幅 (100%)",
                                  "BasePrice":  91.9000015258789,
-                                 "TargetUpPrice":  184,
+                                 "TargetUpPrice":  184.00,
                                  "TargetUpChange":  64.29,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
@@ -644,7 +644,7 @@
                              {
                                  "Rule":  "90日累積漲跌幅 (160%)",
                                  "BasePrice":  75.9000015258789,
-                                 "TargetUpPrice":  197.5,
+                                 "TargetUpPrice":  197.50,
                                  "TargetUpChange":  76.34,
                                  "TargetDownPrice":  null,
                                  "TargetDownChange":  null,
